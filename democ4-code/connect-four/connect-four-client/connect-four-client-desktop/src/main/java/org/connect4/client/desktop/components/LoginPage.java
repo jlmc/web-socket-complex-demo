@@ -22,7 +22,6 @@ import org.connect4.client.desktop.interfaces.IGStrut;
 
 /**
  * The Class LoginPage.
- * @author Carlos
  */
 public class LoginPage extends Page implements IGStrut {
 
