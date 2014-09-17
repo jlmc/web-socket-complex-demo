@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" styleClass="mainScreen" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.connect4.client.desktop.controllers.LoginScreenController">
+    <children>
+        <HBox id="banner" alignment="CENTER" layoutY="0.0" prefWidth="650.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <HBox id="leftBanner" alignment="CENTER_LEFT" spacing="40.0" style="">
+                    <children>
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+                </HBox>
+                <HBox id="HBox" alignment="CENTER" prefWidth="400.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label id="labelHeader" alignment="CENTER" text="Connect four" />
+                    </children>
+                </HBox>
+                <HBox id="rigthBanner" alignment="CENTER_RIGHT" spacing="5.0" style="">
+                    <children>
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <Pane fx:id="loginPanel" layoutX="115.0" layoutY="370.0" prefHeight="280.0" prefWidth="570.0">
+            <children>
+                <Pane>
+                    <children>
+                        <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="570.0" styleClass="errolabel" textAlignment="CENTER" />
+                    </children>
+                </Pane>
+                <GridPane hgap="10.0" layoutX="204.0" layoutY="47.0" vgap="10.0" VBox.vgrow="NEVER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField id="username" fx:id="usernameTxt" layoutX="334.0" layoutY="399.0" onKeyPressed="#onKeyPressed" prefWidth="155.0" promptText="username" scaleX="1.0" scaleY="1.0" style="" styleClass="loginTextfield" />
+                        <PasswordField id="password" fx:id="passwordTxt" layoutX="334.0" layoutY="441.0" onKeyPressed="#onKeyPressed" prefWidth="155.0" promptText="password" scaleX="1.0" scaleY="1.0" styleClass="loginTextfield" GridPane.rowIndex="1" />
+                        <Button fx:id="signInBt" layoutX="331.0" layoutY="487.0" mnemonicParsing="false" onAction="#authenticationAction" prefWidth="163.0" scaleX="1.0" scaleY="1.0" styleClass="shiny-orange" text="Sign in" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+            
+                  
+                <Hyperlink layoutX="234.0" layoutY="193.0" onAction="#onMissingPasswordAction" text="Missing password" />
+            <Hyperlink layoutX="252.0" layoutY="221.0" onAction="#createUserClick" text="Create User" />
+            </children>
+        </Pane>
+        <ImageView fitHeight="214.9970329833959" fitWidth="729.0002170042266" layoutX="36.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="329.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="106.0">
+            <image>
+                <Image url="@../images/Logo.png" />
+            </image>
+        </ImageView>
+    </children>
+    <stylesheets>
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
+</AnchorPane>

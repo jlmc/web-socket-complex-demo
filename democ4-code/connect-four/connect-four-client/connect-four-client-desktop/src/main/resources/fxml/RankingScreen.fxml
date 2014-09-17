@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="RankingScreen" fx:controller="org.connect4.client.desktop.controllers.RankingScreenController" prefHeight="300.0" prefWidth="420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Label layoutX="121.0" layoutY="71.0" text="Ranking Screen">
+      <font>
+        <Font size="22.0" />
+      </font>
+    </Label>
+    <Group id="Group" AnchorPane.bottomAnchor="11.04" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="279.0">
+      <children>
+        <Button layoutX="0.0" layoutY="0.0" mnemonicParsing="false" text="general" onAction="#goToGeneral" />
+        
+      </children>
+    </Group>
+  </children>
+</AnchorPane>

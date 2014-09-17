@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.ps</groupId>
+        <artifactId>connect-four-server</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+
+
+
+    <artifactId>connect-four-server-ear</artifactId>
+    <packaging>ear</packaging>
+    <name>connect Four :: Application Archive</name>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>connect4Server</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-ear-plugin</artifactId>
+                        <configuration>
+                            <modules>
+                                <webModule>
+                                    <groupId>org.ps</groupId>
+                                    <artifactId>connect-four-server-webApp</artifactId>
+                                    <contextRoot>/connect-four-server-webApp</contextRoot>
+                                </webModule>
+                            </modules>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>org.ps</groupId>
+                    <artifactId>connect-four-server-webApp</artifactId>
+                    <version>${project.version}</version>
+                    <type>war</type>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-ear-plugin</artifactId>
+                        <configuration>
+                            <modules>
+                                <webModule>
+                                    <groupId>org.ps</groupId>
+                                    <artifactId>connect-four-server-webApp</artifactId>
+                                    <contextRoot>/connect-four-server-webApp</contextRoot>
+                                </webModule>
+                            </modules>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+             <dependencies>
+               <dependency>
+                    <groupId>org.ps</groupId>
+                    <artifactId>connect-four-server-webApp</artifactId>
+                    <type>war</type>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+
+
+    </profiles>
+</project>

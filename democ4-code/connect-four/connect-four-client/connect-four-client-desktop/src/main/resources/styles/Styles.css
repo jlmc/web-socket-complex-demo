@@ -1,0 +1,239 @@
+.button {
+	-fx-font-weight: bold;
+}
+
+.mainScreen{
+	-fx-background-image: url("../images/BackgroundMockup2.png");
+	-fx-background-size: cover;
+	-fx-opacity: 0.85;
+}
+
+#chatGeneral {
+	-fx-background-image: url("../images/BackgroundMockup2.png");
+	-fx-background-size: cover;
+	-fx-opacity: 0.85;
+}
+/*
+#header {
+	-fx-padding: 10px;
+	-fx-background-image: url("../images/blackbackground.png");
+	-fx-background-size: cover;
+	-fx-background-position: left top;
+	-fx-background-repeat: stretch;
+}
+*/
+
+.c4label {
+	-fx-background-color: #fcf4e1;
+	-fx-font-size: 20px;
+	-fx-font-family: "Felix Titling";
+}
+
+#banner{
+	-fx-background-color: #111;
+}
+
+#leftBanner{
+	-fx-padding:    0px 0px 0px 22px;
+}
+
+#rigthBanner{
+	-fx-padding:    0px 5px 0px 0px;
+}
+
+#labelHeader{
+	-fx-font-size: 35px;
+	-fx-background-color: #111;
+	-fx-text-fill: white;
+}
+
+
+.titled-pane>*.content {
+	-fx-background-color: null;
+}
+
+.titled-pane {
+	-fx-skin: "com.sun.javafx.scene.control.skin.TitledPaneSkin";
+	/* -fx-text-fill: -fx-text-base-color; */
+	-fx-text-fill: white;
+}
+
+.titled-pane:focused {
+	-fx-text-fill: white;
+}
+
+.titled-pane>.title {
+	-fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+	-fx-background-insets: 0, 1, 2;
+	-fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	
+	/* by jlc*/
+	-fx-background-color: #111;
+	-fx-font-size: 20px;
+	-fx-font-family: "Felix Titling";
+}
+
+.titled-pane:focused>.title {
+	-fx-color: -fx-focus-color;
+}
+
+.titled-pane>.title>.arrow-button {
+	-fx-background-color: null;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+	-fx-padding: 0.0em 0.25em 0.0em 0.0em; /* 0 3 0 0 */
+}
+
+.titled-pane>.title>.arrow-button .arrow {
+	-fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+	-fx-background-insets: 1 0 -1 0, 0;
+	-fx-padding: 0.25em 0.3125em 0.25em 0.3125em; /* 3 3.75 3 3.75 */
+	-fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+.titled-pane:collapsed>.title>.arrow-button .arrow {
+	-fx-rotate: -90;
+}
+
+.titled-pane>*.content {
+	-fx-background-color: -fx-box-border,
+		linear-gradient(to bottom, derive(-fx-color, -02%),
+		derive(-fx-color, 65%) 12%, derive(-fx-color, 23%) 88%,
+		derive(-fx-color, 50%) 99%, -fx-box-border);
+	-fx-background-insets: 0, 0 1 1 1;
+	-fx-padding: 0.167em;
+}
+
+.titled-pane:focused>.title>.arrow-button .arrow {
+	-fx-background-color: white;
+}
+
+.loginTextfield{
+    -fx-background-color: #fcf4e1;
+    -fx-font-size: 15px;
+    -fx-font-family: "Felix Titling";
+    -fx-text-fill: #333333;
+    -fx-padding: 5 5 5 5;
+    -fx-margin: 10 10 10 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.loginTextfield:focused{
+ -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+
+.shiny-orange {
+    -fx-background-color: linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+}
+
+.image-exemple{
+	fx-margin: 0 auto;
+}
+
+.shiny-orange:hover {
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.7 , 0 , 0 );
+}
+.shiny-orange:focused{
+    -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+.shiny-orange:pressed {
+    -fx-effect: dropshadow( three-pass-box , #9999ff, 5, 0.7 , 0 , 0 );
+}
+
+.errolabel{
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;
+	-fx-font-size: 15;
+	-fx-text-fill: #fcf4e1;
+	-fx-text-align: center;
+}
+
+#loginBox{
+	border:1px solid black; text-align: center;
+}
+
+
+
+.hyperlink {
+    -fx-text-fill: #2365b4;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.7 , 0 , 0 );
+}
+
+.hyperlink:focused {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+     -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+
+.hyperlink:visited {
+    -fx-text-fill: #2365b4;
+}
+
+/**/
+/* When the list-cell is selected and focused */
+.list-view:focused .list-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-selection-bar;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    /* -fx-text-fill: -fx-selection-bar-text; 
+    -fx-text-fill: red; */
+}
+
+/* When the list-cell is selected and selected-hovered but not focused. 
+    Applied when the multiple items are selected but not focused */
+.list-view:focused .list-cell:filled:selected, .list-view:focused .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    /* -fx-text-fill: -fx-selection-bar-text;  
+    -fx-text-fill: green;*/
+}
+
+/* When the list-cell is selected, focused and mouse hovered */
+.list-view:focused .list-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-selection-bar;
+    -fx-background-insets: 0, 1, 2;
+    /* -fx-text-fill: -fx-selection-bar-text; 
+    -fx-text-fill: yellow; */
+}
+
+
+.historyConversation{
+    -fx-background-color: #fcf4e1;
+    -fx-font-size: 15px;
+    -fx-font-family: "Felix Titling";
+    -fx-text-fill: #333333;
+    -fx-padding: 5 5 5 5;
+    -fx-margin: 10 10 10 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.historyConversation:focused{
+ -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+
+.welcome-text {
+   -fx-font-size: 32px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #818181;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}

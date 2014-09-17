@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="org.connect4.client.desktop.controllers.RegisterScreenController" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" styleClass="mainScreen" AnchorPane.leftAnchor="0.0"
+    AnchorPane.rightAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox id="banner" alignment="CENTER" layoutY="0.0" prefWidth="650.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <HBox id="leftBanner" alignment="CENTER_LEFT" spacing="40.0" style="">
+                    <children>
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+                </HBox>
+                <HBox id="HBox" alignment="CENTER" prefWidth="400.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label id="labelHeader" alignment="CENTER" text="Connect four" />
+                    </children>
+                </HBox>
+                <HBox id="rigthBanner" alignment="CENTER_RIGHT" spacing="5.0" style="">
+                    <children>
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <Pane layoutX="14.0" layoutY="125.0" prefHeight="511.0" prefWidth="776.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="125.0">
+            <children>
+                <Label layoutX="237.0" styleClass="welcome-text" text="Create New User" />
+                <Pane layoutX="109.0" layoutY="80.0">
+                    <children>
+                        <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="570.0" styleClass="errolabel" textAlignment="CENTER" />
+                        <GridPane alignment="CENTER" hgap="10.0" layoutX="166.0" layoutY="41.0" vgap="15.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="NEVER" />
+                            </rowConstraints>
+                            <children>
+                                <TextField id="display Name" fx:id="displaynameTx" layoutX="301.0" layoutY="145.0"  prefHeight="31.0" prefWidth="218.0" promptText="displayName" style="" styleClass="loginTextfield" />
+                                <TextField fx:id="usernameTx" layoutX="304.0" layoutY="199.0" prefHeight="31.0" prefWidth="211.0" promptText="username" styleClass="loginTextfield" GridPane.rowIndex="1" />
+                                <PasswordField fx:id="passwordTx" layoutX="305.0" layoutY="249.0" prefHeight="31.0" prefWidth="211.0" promptText="password" styleClass="loginTextfield" GridPane.rowIndex="2" />
+                                <PasswordField fx:id="confirmPasswordTx" layoutX="308.0" layoutY="300.0" prefHeight="31.0" prefWidth="211.0" promptText="confirm password" styleClass="loginTextfield" GridPane.rowIndex="3" />
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                    <children>
+
+                                        <Button fx:id="CreateUserBt" mnemonicParsing="false" onAction="#createUserAction" prefWidth="163.0" styleClass="shiny-orange" text="Create User" />
+                                    </children>
+                                </HBox>
+                            </children>
+                            <opaqueInsets>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </opaqueInsets>
+                        </GridPane>
+                    </children>
+                </Pane>
+                <Button layoutY="486.0" mnemonicParsing="false" onAction="#backAction" text="&lt; Back" />
+            </children>
+        </Pane>
+
+    </children>
+    <stylesheets>
+        <URL value="@../styles/Styles.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 30, 2014, 1:56:41 PM
+    Author     : Carlos
+*/
+
+#root
+{
+    -fx-effect: dropshadow( three-pass-box , black , 20, 0 , 0 , 0 );
+}
+#vbCenter
+{
+    -fx-padding: -1px 0px 0px 0px;
+    -fx-background-image: url("/images/BackgroundMockup2.png");
+        -fx-background-size: cover;
+    -fx-background-position: left top;
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: 0.85;
+}
+
+#mainToolBar {
+    -fx-padding: 10px;
+    -fx-background-image: url("/images/topBar.png");
+    -fx-background-size: cover;
+    -fx-background-position: left top;
+    -fx-background-repeat: no-repeat;  
+}
+
+#toolBar{
+    -fx-background-color: #252525;
+    -fx-effect: dropshadow( three-pass-box , black , 10, 0 , 0 , 0 );
+}
+#loginLabel{
+    -fx-background-color: #4e4e4e;
+    -fx-font-size: 20px;
+    -fx-font-family: "Felix Titling";
+    -fx-text-fill: #fdfcfb;
+    -fx-padding: 5 0 5 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#bt
+{
+    -fx-background-color: null;
+    -fx-padding: -10 0 -10 0;
+    -fx-background-position: left top;
+    -fx-background-repeat: no-repeat;
+}
+
+#bt:hover {
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.7 , 0 , 0 );
+}
+#bt :focused{
+    -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+#bt:pressed {
+    -fx-effect: dropshadow( three-pass-box , #9999ff, 5, 0.7 , 0 , 0 );
+}
+
+#box{
+    -fx-background-color: #fcf4e1;
+    -fx-font-size: 20px;
+    -fx-font-family: "Felix Titling";
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#loginTextfield{
+    -fx-background-color: #fcf4e1;
+    -fx-font-size: 20px;
+    -fx-font-family: "Felix Titling";
+    -fx-text-fill: #333333;
+    -fx-padding: 5 0 5 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+#title 
+ {
+   -fx-font-size: 48px;
+   -fx-font-family: "Felix Titling";
+   //-fx-text-fill: linear-gradient(white, #acacac);
+   -fx-text-fill: #fdfcfb;
+   -fx-padding: 5 0 5 10;
+   -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+	
+#ProxyDialog {
+    -fx-background-color: black, white, 
+        linear-gradient(rgb(250,250,250), rgb(230,230,230));
+    -fx-background-insets: 0, 1, 2;
+    
+    -fx-padding: 15;
+    -fx-effect: dropshadow( three-pass-box , black , 20, 0 , 0 , 0 );
+}

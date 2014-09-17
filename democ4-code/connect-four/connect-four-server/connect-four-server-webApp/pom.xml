@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.ps</groupId>
+        <artifactId>connect-four-server</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>connect-four-server-webApp</artifactId>
+    <packaging>war</packaging>
+    <name>connect-four-server-webApp Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <!-- Java EE 7 -->
+        <javaee.api.version>7.0</javaee.api.version>
+        <!-- Wildfly -->
+        <version.jboss.spec.javaee.7.0>8.0.0.Beta1</version.jboss.spec.javaee.7.0>
+        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+    </properties>
+
+
+    <build>
+        <finalName>connect-four-server-webApp</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven.source.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven.clean.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven.war.plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <!-- To deploy on Wildfly -->
+            <!--
+                <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.jboss.maven.plugin}</version>
+                <configuration>
+                <skip>false</skip>
+                </configuration>
+                </plugin>
+            -->
+
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.1.Final</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!--sqlLite -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.7.2</version>
+        </dependency>
+        <!-- junit test dependency -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+
+       
+        <!-- messages -->
+        <dependency>
+            <groupId>org.ps</groupId>
+            <artifactId>connect-four-messages</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ps</groupId>
+            <artifactId>connect-four-utils</artifactId>
+        </dependency>
+         <dependency>
+            <groupId>org.ps</groupId>
+            <artifactId>connect-four-services-dal</artifactId>
+        </dependency>
+ 
+    </dependencies>
+
+</project>
